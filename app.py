@@ -16,7 +16,7 @@ def register():
         if not name or not email or not course:
             return render_template(
                 'register.html',
-                error='Please fill in all fields.'
+                error='Please fill in all fields. Try again.'
             )
         return redirect(
             url_for('success', name=name, email=email, course=course)
